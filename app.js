@@ -6,14 +6,18 @@ const port = 3000;
 
 const cheerio = require('cheerio');
 
+app.set('views', './views');
 
 app.set('view engine', 'ejs');
 
-app.use('view', 'views');
 
 
 
 app.get('/', async (req, res) => {
+  res.status(200).render('index', {title: 'Home'});
+});
+
+app.post('/scrape', async (req, res) => {
     try {
         let url = 'https://w3schools.com';
         let data = await fetch(url);
@@ -24,7 +28,7 @@ app.get('/', async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 
 

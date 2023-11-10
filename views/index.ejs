@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= title %></title>
+
+    <style>
+
+        body {
+            background-color: darkgray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .form-heading {
+            text-align: center;
+        }
+
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid black;
+            padding: 6px 2px;
+            outline: none;
+            margin: 10px 0;
+            background-color: darkgray;
+            font-size: medium;
+        }
+        input[type=submit] {
+            border: 1px solid black;
+            padding: 4px;
+            width: 70px;
+            text-align: center;
+        }
+
+        input[type=submit]:hover {
+            background-color: black;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="form-container">
+        <h4 class="form-heading">Enter website url</h4>
         <form action="/scrape">
-            <label for="url">
                 <input type="text" name="url" id="url">
-            </label>
-            <input type="button" value="Submit">
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
