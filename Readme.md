@@ -1,6 +1,6 @@
-A simple web scrapping software 
+# A simple web scrapping web application 
 
-This web app is can be used to scrape data from various websites, most especially server-side rendered websites
+This web app is can be used to scrape data from various websites, most especially server-side rendered websites created with express, axios and cheerio
 
 ## Table of contents
 
