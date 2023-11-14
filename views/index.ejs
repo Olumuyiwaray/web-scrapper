@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <script defer src="index.js"></script>
 
     <style>
 
@@ -72,10 +73,11 @@
 <body>
     <div class="form-container">
         <form action="/scrape" method="post">
+            <div id="error_div"></div>
                 <input type="text" name="url" id="url" placeholder="enter url">
-                <input type="text" name="selector" id="seletor" placeholder="enter selector to locate">
+                <input type="text" name="selector" id="selector" placeholder="enter selector to locate">
                 
-            <input type="submit" value="Submit">
+            <input type="submit" id="submit_button" value="Submit">
         </form>
     </div>
 </body>
